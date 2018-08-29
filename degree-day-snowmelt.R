@@ -4,7 +4,7 @@
 
 rm(list=ls())
 
-setwd("C:/Users/khafe/Desktop/Classes/WR_502_EnviroHydroModeling/data")
+setwd("C:/Users/konrad/Desktop/Classes/WR_502_EnviroHydroModeling/data")
 fn = "snotel_klondike_2017.csv"
 
 indat <- read.csv(fn)
@@ -57,7 +57,7 @@ rmse <- function(par, swe, precip, temp)
 {
   #par order = k, tbase, train, tsnow
   swe.melt <- par[1]*(tavg-par[2])
-  swe.cum <- vector(mode="double", length = length(swe.mod))
+  swe.cum <- vector(mode="double", length = length(swe))
   precip.cm <- vector(mode="double", length = length(precip))
   swe.mod <- vector(mode="double", length = length(precip))
   
